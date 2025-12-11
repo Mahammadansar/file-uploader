@@ -57,13 +57,15 @@ This implementation works the same way, but stores files locally on your server 
 
 ## Setup Instructions
 
-### 1. Install Dependencies
+### Local Development (No Cloud Storage Needed)
+
+#### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Run the Server
+#### 2. Run the Server
 
 ```bash
 npm start
@@ -80,13 +82,27 @@ That's it! No AWS credentials or cloud storage setup needed. The server will:
 - Create the SQLite database automatically
 - Start serving on `http://localhost:3000`
 
-### 3. Optional: Configure Port
+#### 3. Optional: Configure Port
 
 Create a `.env` file to customize the port:
 
 ```bash
 PORT=3000
 ```
+
+### Deploying to Vercel (Cloud Storage Required)
+
+For Vercel deployment with 30GB+ file support, you need cloud storage. **Don't have credentials yet?** No problem!
+
+📖 **Quick Setup Guide**: See [`QUICK_START_R2.md`](./QUICK_START_R2.md) for a 5-minute Cloudflare R2 setup
+
+📚 **Detailed Guide**: See [`SETUP_CLOUD_STORAGE.md`](./SETUP_CLOUD_STORAGE.md) for:
+- Cloudflare R2 setup (recommended - free downloads!)
+- AWS S3 setup
+- Backblaze B2 setup
+- Comparison of free tiers
+
+🚀 **Vercel Deployment**: See [`VERCEL_DEPLOYMENT.md`](./VERCEL_DEPLOYMENT.md) for complete deployment instructions
 
 ## Usage
 
