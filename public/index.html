@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploader - WeTransfer Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📤 File Uploader</h1>
+            <p>Upload files up to 20GB using multipart upload</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileInput" />
+                    <label for="fileInput" class="file-label">
+                        <span class="file-label-text">Choose a file</span>
+                    </label>
+                </div>
+
+                <div id="fileInfo" class="file-info hidden">
+                    <p><strong>File:</strong> <span id="fileName"></span></p>
+                    <p><strong>Size:</strong> <span id="fileSize"></span></p>
+                </div>
+
+                <button id="uploadBtn" class="upload-btn hidden" disabled>Upload File</button>
+                <button id="cancelBtn" class="cancel-btn hidden">Cancel Upload</button>
+
+                <div id="progressContainer" class="progress-container hidden">
+                    <div class="progress-bar-wrapper">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span id="progressText">0%</span>
+                        <span id="uploadSpeed"></span>
+                    </div>
+                </div>
+
+                <div id="logs" class="logs hidden"></div>
+
+                <div id="result" class="result hidden">
+                    <h2>✅ Upload Complete!</h2>
+                    <div class="share-link">
+                        <label>Share this link:</label>
+                        <div class="link-wrapper">
+                            <input type="text" id="shareLink" readonly />
+                            <button id="copyBtn" class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="upload.js"></script>
+</body>
+</html>
+

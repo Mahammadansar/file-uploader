@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File - WeTransfer Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📥 File Download</h1>
+        </header>
+
+        <main>
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Preparing your file...</p>
+            </div>
+
+            <div id="error" class="error hidden">
+                <h2>❌ Error</h2>
+                <p id="errorMessage"></p>
+                <a href="/" class="btn">Go to Upload</a>
+            </div>
+
+            <div id="downloadReady" class="download-ready hidden">
+                <h2>✅ File Ready to Download</h2>
+                <div class="file-details">
+                    <p><strong>File Name:</strong> <span id="downloadFileName"></span></p>
+                    <p><strong>File Size:</strong> <span id="downloadFileSize"></span></p>
+                </div>
+                <button id="downloadBtn" class="download-btn">Download File</button>
+                <a href="/" class="btn secondary">Upload Another File</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="download.js"></script>
+</body>
+</html>
+
